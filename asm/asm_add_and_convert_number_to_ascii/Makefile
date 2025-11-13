@@ -1,11 +1,11 @@
 OBJ_FILES := calculate_sum.o conversion_lib.o
 
-all: main.asm
+all: main.out
 
 .PHONY: all
 
-main.asm: $(OBJ_FILES)
-	ld $(OBJ_FILES) -o main.asm
+main.out: $(OBJ_FILES)
+	ld $(OBJ_FILES) -o main.out
 
 $(OBJ_FILES): %.o: %.asm
 	nasm -f elf64 -o $@ $^
