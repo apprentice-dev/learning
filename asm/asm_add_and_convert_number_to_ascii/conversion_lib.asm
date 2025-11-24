@@ -14,7 +14,7 @@ _start:
 sub rsp, 8 ;allocate 8 bytes on 
 mov r11, rsp
 push r11 ;give the high address of the string so the procedure writes from hi to lo
-push 67676767
+push 67676767 ; cuz 67
 push 8
 
 call _func_convert_unsigned
