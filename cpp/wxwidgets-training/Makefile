@@ -12,3 +12,8 @@ $(TARGET_EXEC): wx-config $(source_files:%.cpp=%.o)
 wx-config:
 	ln -s /home/apprentice/Desktop/wxwidget-source/wxWidgets-3.3.1/mj-static-build/wx-config ./wx-config
 
+.PHONY: clean
+
+clean:
+	rm *.o
+
